@@ -15,8 +15,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 // Enable cross-origin resource sharing for frontend must be registered before api
 app.options('*', cors());
-// set up cors for port 5173
-app.use(cors({origin: 'http://localhost:5173'}));
+// allow cors from 
+app.use(cors({origin: '*'}));
 
 // Import routes
 app.get('/api', function(req, res) {
